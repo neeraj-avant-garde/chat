@@ -15,7 +15,7 @@
     });
  
     // Our own private channel
-    PrivatePub.subscribe.subscribe('/messages/private/<%= session[:username] %>', function(data) {
+    PrivatePub.subscribe('/messages/private/<%= session[:username] %>', function(data) {
       $('<p></p>').addClass('private').html(data.username + ": " + data.msg).appendTo('#chat_room');
     });
 
